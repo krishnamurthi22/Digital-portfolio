@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>login & Register</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="formbox">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">log in</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="download.png">
+                <img src="download 1.png">
+                <img src="download 2.png">
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="user id" required pattern="[A-Z]*">
+                <input type="password" class="input-field" placeholder="password" required pattern="[a-z]">
+                <input type="checkbox" class="checkbox"> <span>Remember password</span>
+                <button type="submit" class="submit-btn">log in</button>
+            </form>
+            <form id="register"  class="input-group">
+                <input type="text" class="input-field" placeholder="user id" required>
+                <input type="email" class="input-field" placeholder="Email id" required>
+                <input type="text" class="input-field" placeholder="password" required>
+                <input type="checkbox" class="checkbox"> <span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+        
+    </div>
+    <script>
+        var x=document.getElementById("login")
+        var y=document.getElementById("register")
+        var z=document.getElementById("btn")
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0";
+        }
+        var element = document.getElementById("submit-btn");
+        element.onclick=function(){
+            console.log('click event create');        }
+    </script>
+</body>
+</html>
